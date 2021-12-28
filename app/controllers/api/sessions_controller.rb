@@ -1,26 +1,22 @@
 class Api::SessionsController < ApplicationController
+    skip_before_action :verify_authenticity_token
     before_action :ensure_logged_in, only: [:destroy]
-
-    def new
-        render :new
-    end
 
     def create
         @user = User.find_by_credentials(
-            params[:user][:password],
+            params[:user][:username],
             params[:user][:password]
         )
         if @user
             login!(@user)
-            redirect_to users_url
+            render "api/users/show"
         else
-            flash.now[:errors] = ['Invalid username or password']
-            render :new
+            render json: ["Invalid username or password."], status: 401
         end
     end
 
     def destroy
         logout!
-        render {}
+        render json: {}
     end
 end
