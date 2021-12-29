@@ -25,7 +25,6 @@ class SessionForm extends React.Component {
   
     render(){
         const errorList = this.props.errors.map( error => <li key={error}>{error}</li> )
-
         return (
         <div>
             <form onSubmit={this.handleSubmit}>
