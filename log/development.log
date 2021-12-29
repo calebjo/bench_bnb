@@ -3569,3 +3569,141 @@ Processing by Api::BenchesController#index as JSON
 Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 2.3ms)
 
 
+Started GET "/" for ::1 at 2021-12-29 11:48:48 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 630ms (Views: 628.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/benches" for ::1 at 2021-12-29 11:48:53 -0500
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/_bench.json.jbuilder (0.2ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/index.json.jbuilder (6.8ms)
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/benches" for ::1 at 2021-12-29 11:49:21 -0500
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/_bench.json.jbuilder (0.2ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/index.json.jbuilder (2.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/benches" for ::1 at 2021-12-29 11:50:14 -0500
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/_bench.json.jbuilder (0.2ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.1ms)
+  Rendered api/benches/index.json.jbuilder (2.7ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/benches" for ::1 at 2021-12-29 11:54:05 -0500
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/_bench.json.jbuilder (0.2ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/index.json.jbuilder (2.2ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-29 11:55:25 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 638ms (Views: 630.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/benches" for ::1 at 2021-12-29 11:55:26 -0500
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/_bench.json.jbuilder (0.2ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.2ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/index.json.jbuilder (9.1ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2021-12-29 11:55:40 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 224ms (Views: 223.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/benches" for ::1 at 2021-12-29 11:55:45 -0500
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/_bench.json.jbuilder (0.2ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/index.json.jbuilder (2.4ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-29 11:57:55 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 223ms (Views: 222.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/benches" for ::1 at 2021-12-29 11:58:10 -0500
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/_bench.json.jbuilder (0.2ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/_bench.json.jbuilder (0.0ms)
+  Rendered api/benches/index.json.jbuilder (2.6ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+

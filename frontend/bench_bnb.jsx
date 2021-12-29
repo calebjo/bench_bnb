@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import * as APIUtil from "./util/session_api_util.js"
 import configureStore from "./store/store.js"
 import Root from "./components/root";
+
+import * as SessionAPIUTIL from "./util/session_api_util.js"
+import { fetchBenches } from "./util/bench_api_util.js"
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -20,14 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
-  // TESTING START
-  window.signup = APIUtil.signup;
-  window.login = APIUtil.login;
-  window.logout = APIUtil.logout;
+  // TESTING START ---------------------
+  window.signup = SessionAPIUTIL.signup;
+  window.login = SessionAPIUTIL.login;
+  window.logout = SessionAPIUTIL.logout;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  // TESTING END
+
+  window.fetchBenches = fetchBenches;
+  // TESTING END ------------------------
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
