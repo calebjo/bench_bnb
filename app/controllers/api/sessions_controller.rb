@@ -8,14 +8,18 @@ class Api::SessionsController < ApplicationController
         )
         if @user
             login!(@user)
-            render "api/users/show"
+            redirect_to api_user_url(@user)
         else
             render json: ["Invalid username or password."], status: 401
         end
     end
 
     def destroy
-        logout!
-        render json: {}
+        if !logged_in? 
+            render json: ["You must be signed in to sign out."], status: 404
+        else
+            logout!
+            render json: {}
+        end
     end
 end

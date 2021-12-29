@@ -1,14 +1,14 @@
 class ApplicationController < ActionController::Base
     skip_before_action :verify_authenticity_token
-    helper_method :current_user, :logged_in?
+    helper_method :current_user, :ensure_logged_in, :logged_in?
 
     def current_user
         @current_user ||= User.find_by(session_token: session[:session_token])
     end
 
     def ensure_logged_in
-        unless current_user
-            render json: { error: ["No current user."] }, status: 404
+        if !logged_in?
+            redirect_to api_user_url(@current_user)
         end
     end
 
