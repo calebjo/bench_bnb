@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import MarkerManager from "../../util/marker_manager";
+
 export default class BenchMap extends React.Component {
     constructor(props){
         super(props);
-        this.addBench = this.addBench.bind(this);
     }
 
     componentDidMount() {
@@ -14,27 +15,14 @@ export default class BenchMap extends React.Component {
         };
 
         const map = ReactDOM.findDOMNode(this.refs.map)
-    
-        // wrap this.mapNode in a Google Map
         this.map = new google.maps.Map(map, mapOptions);
 
-        // this.listenForMove();
-        if(this.props.benches) {
-            this.props.benches.forEach(this.addBench);
-        }
+        this.MarkerManager = new MarkerManager(this.map);
+        this.MarkerManager.updateMarkers();
     }
 
-    addBench(bench) {
-        const pos = new google.maps.LatLng(bench.lat, bench.lng);
-
-        const marker = new google.maps.Marker({
-            position: pos,
-            map: this.map
-        })
-
-        marker.addListener('click', () => {
-            alert(`Clicked on: ${bench.description}`)
-        })
+    componentDidUpdate(){
+        this.MarkerManager.updateMarkers();
     }
 
     render(){

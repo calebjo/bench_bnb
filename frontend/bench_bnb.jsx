@@ -4,7 +4,7 @@ import configureStore from "./store/store.js"
 import Root from "./components/root";
 
 import * as SessionAPIUTIL from "./util/session_api_util.js"
-import { fetchBenches } from "./util/bench_api_util.js"
+import { fetchBenches } from "./actions/bench_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
