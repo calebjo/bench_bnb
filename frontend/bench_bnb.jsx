@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import configureStore from "./store/store.js"
 import Root from "./components/root";
 
-import * as SessionAPIUTIL from "./util/session_api_util.js"
+import { signup, login, logout } from "./actions/session_actions";
 import { fetchBenches } from "./actions/bench_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // TESTING START ---------------------
-  window.signup = SessionAPIUTIL.signup;
-  window.login = SessionAPIUTIL.login;
-  window.logout = SessionAPIUTIL.logout;
+  window.signup = signup;
+  window.login = login;
+  window.logout = logout;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
