@@ -1,0 +1,14 @@
+import React from "react";
+
+export default class BenchMap extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
+    render(){
+        return(
+            <div id='map-container' ref='map'>
+            </div>
+        )
+    }
+}

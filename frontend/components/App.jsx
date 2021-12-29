@@ -5,18 +5,20 @@ import { AuthRoute } from "../util/route_util";
 import GreetingContainer from "./greeting/greeting_container";
 import SignupFormContainer from "./form/signup_form_container";
 import LoginFormContainer from "./form/login_form_container";
-import BenchIndexContainer from "./bench/bench_index_container";
+import SearchContainer from "./search/search_container";
 
 const App = () => (
-  <div>
-    <header>
-      <h1>Bench BnB</h1>
+  <div className="app">
+    <div className="top-bar">
+      <header>
+        <h1>Bench BnB</h1>
+      </header>
       <GreetingContainer />
-    </header>
+    </div>
 
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
-    <Route exact path="/" component={BenchIndexContainer} />
+    <Route exact path="/" component={SearchContainer} />
   </div>
 );
 
